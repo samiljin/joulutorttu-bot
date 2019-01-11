@@ -1,0 +1,5 @@
+.aws-sam/
+.bundle/
+vendor/
+packaged-template.yaml
+.DS_Store

@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: 'Joulutorttu bot'
+
+Resources:
+  JoulutorttuBotFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Runtime: 'ruby2.5'
+      Handler: main.run
+      Events:
+        RunScript:
+          Type: Schedule
+          Properties:
+            Schedule: cron(00 12 * * ? *)
